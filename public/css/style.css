@@ -36,7 +36,7 @@ body{
 
 
 .nv-cover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/public/images/roadTrip.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/public/images/blackboard.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -51,7 +51,7 @@ h1{
     font-weight: 100;
     padding-bottom: 0;
     margin-bottom: 0;
-    font-size: 270%;
+    font-size: 4rem;
 }
 
 h3{
@@ -66,11 +66,14 @@ h3{
 }
 
 .text {
+    position: relative;
+    top: 17%;
     height: 400px;
     margin-top: 20px;
     margin-left: 40px;
     padding: 20px;
     align-content: center;
+    text-align: center;
 }
 
 .intro .text {
@@ -100,28 +103,28 @@ h3{
 
 .nv-btn-full:link,
 .nv-btn-full:visited{
-    background-color: #f39c12;
+    background-color: #2ecc71;
     color: white;
-    border: 1px solid #f39c12;
+    border: 1px solid #2ecc71;
 }
 
 .nv-btn-ghost:link,
 .nv-btn-ghost:visited{
-    color: #f39c12;
-    border: 1px solid #f39c12;
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
 }
 
 .nv-btn-full:hover,
 .nv-btn-full:active{
-    background-color: #d35400;
-    border: 1px solid #d35400;
+    background-color: #176b3a;
+    border: 1px solid #176b3a;
     
 }
 
 .nv-btn-ghost:hover,
 .nv-btn-ghost:active{
-    background-color: #d35400;
-    border: 1px solid #d35400;
+    background-color: #176b3a;
+    border: 1px solid #176b3a;
     color: white;
 }
 
@@ -160,17 +163,17 @@ h3{
 
 .main-nav li a:hover,
 .main-nav li a:active{
-    border-bottom: 2px solid #f39c12;
+    border-bottom: 2px solid #2ecc71;
     background-color: none;
 }
 
 .lavender{
-    background-color: #f39c12;
+    background-color: #2ecc71;
 }
 
 .lavender:hover,
 .lavender:active{
-    background-color: #d35400;
+    background-color: #176b3a;
 }
 
 .logged-out{
@@ -201,7 +204,7 @@ h3{
     float: left;
     text-align: center;
     align-content: center;
-    color: #f39c12;
+    color: #2ecc71;
 }
 
 .about-box h6{
@@ -231,7 +234,7 @@ h3{
 }
 
 footer{
-    background-color: #f39c12;
+    background-color: #2ecc71;
     height: 25vh;
 }
 
@@ -272,7 +275,7 @@ h5{
 }
 
 #schedule-wrapper table tr td ul li.type{
-    color: #f39c12;
+    color: #2ecc71;
     font-size: large;
 }
 
@@ -287,10 +290,10 @@ h5{
 
 .selector-label {
     padding-right: 18px;
-    color: #f39c12;
+    color: #2ecc71;
 }
 .topLabel{
-    color: #d35400;
+    color: #176b3a;
 }
 
 .cover{
