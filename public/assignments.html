@@ -13,7 +13,7 @@
   <link href="css/assignments.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-    <div class="nv-cover1" style="height: 40vh;">
+    <div class="nv-cover" style="height: 40vh;">
         <!--NAVBAR (different for homepage)-->
         <div class="nv-nav">
             <img src="images/logo.png" alt="Logo" class="logo">
@@ -48,7 +48,6 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
@@ -58,26 +57,23 @@
   <script>
     // web app's Firebase configuration
     var firebaseConfig = {
-      apiKey: "AIzaSyBm-4tu-ZW5kdpLkUw6OLxFjB_ajLJFEnY",
-      authDomain: "preeminent-paninis.firebaseapp.com",
-      databaseURL: "https://preeminent-paninis.firebaseio.com",
-      projectId: "preeminent-paninis",
-      storageBucket: "preeminent-paninis.appspot.com",
-      messagingSenderId: "1025410002463",
-      appId: "1:1025410002463:web:40cec81a8b2a7c8f7caf2a",
-      measurementId: "G-Y35S3D1RJ4"
+    apiKey: "AIzaSyDzmOrKYE_XcdA4cvhu2CzjtmUhTw_FSH4",
+    authDomain: "coolschooltool-b83b4.firebaseapp.com",
+    databaseURL: "https://coolschooltool-b83b4.firebaseio.com",
+    projectId: "coolschooltool-b83b4",
+    storageBucket: "coolschooltool-b83b4.appspot.com",
+    messagingSenderId: "1019691363895",
+    appId: "1:1019691363895:web:bd161cc9399216e385d9b2",
+    measurementId: "G-SXS686NZ6R"
+  };
 
-      
-    };
      // Initialize Firebase
      firebase.initializeApp(firebaseConfig);
      const auth = firebase.auth();
-    const db = firebase.firestore();
+      const db = firebase.firestore();
     
   </script>
   <script src="js/auth.js" ></script>
   <script src="js/index.js" defer></script>
-  <script src="js/queries.js" defer></script>
-  <script src="js/chat.js"></script>
   </body>
 </html>
