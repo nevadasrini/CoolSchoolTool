@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    scroll-behavior: smooth;
+    font-family: 'Baloo Da 2';
+    box-sizing: border-box;
+}
+
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+
+}
+
+html{
+    background-color: white;
+    font-family: 'Baloo Da 2', cursive, 'Helvetica Neue', Arial;
+    font-size: 20px;
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+    position: relative;
+}
+body{
+    margin:0px;
+}
+
+
+.nv-cover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/public/images/roadTrip.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    background-attachment: fixed;
+}
+
+h1{
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    color: white;
+    font-weight: 100;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 270%;
+}
+
+h3{
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-top:10px;
+    margin-top:0;
+    font-size: 2rem;
+}
+
+.text {
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+.intro .text {
+    background-color: rgba(0, 0, 0, 0.31);
+    width: 50%;
+    color: white;
+    float: left;
+}
+
+.nv-btn:link,
+.nv-btn:visited{
+    display: inline-block;
+    border-radius: 200px;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 40px;
+    margin-right: 20px;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
+    box-shadow: 13px 18px 23px -2px rgba(0,0,0,0.75);
+    font-size: 1.2rem;
+}
+
+.nv-btn:hover,
+.nv-btn:active{
+    transform: translate(0, 3px);
+}
+
+.nv-btn-full:link,
+.nv-btn-full:visited{
+    background-color: #f39c12;
+    color: white;
+    border: 1px solid #f39c12;
+}
+
+.nv-btn-ghost:link,
+.nv-btn-ghost:visited{
+    color: #f39c12;
+    border: 1px solid #f39c12;
+}
+
+.nv-btn-full:hover,
+.nv-btn-full:active{
+    background-color: #d35400;
+    border: 1px solid #d35400;
+    
+}
+
+.nv-btn-ghost:hover,
+.nv-btn-ghost:active{
+    background-color: #d35400;
+    border: 1px solid #d35400;
+    color: white;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+.nv-btn-nav{
+    margin: 0;
+    background-color: none;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 20px;
+    transition: border-bottom 0.3s;
+    font-size: 1.2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #f39c12;
+    background-color: none;
+}
+
+.lavender{
+    background-color: #f39c12;
+}
+
+.lavender:hover,
+.lavender:active{
+    background-color: #d35400;
+}
+
+.logged-out{
+    float:right;
+}
+
+.logged-in{
+    float:right;
+}
+
+.banner-fit{
+    height: 33vh;
+    width: 100%;
+    background-color: #141414;
+}
+
+.about-fit{
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/public/pics/aboutbg.jpg);
+    align-content: center;
+}
+
+.about-box{
+    height: 30vh;
+    width: 25%;
+    float: left;
+    text-align: center;
+    align-content: center;
+    color: #f39c12;
+}
+
+.about-box h6{
+    font-size: 1.5rem;
+}
+
+.about-icon{
+    margin-top: 8%;
+}
+
+.about-page{
+    background-color: rgba(255, 255, 255, 0.822);
+    width: 30%;
+    float: left;
+    margin: 5%;
+    height: 70vh;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.233);
+    padding: 3%;
+    padding-top: 0%;
+}
+
+.center{
+    position:relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-40%, 50%);
+}
+
+footer{
+    background-color: #f39c12;
+    height: 25vh;
+}
+
+h5{
+    font-size: 1rem;
+}
+.footer-section{
+    width: 30%;
+    margin-left: 15%;
+    margin-top: 0.5%;
+    float: left;
+    height: 20vh;
+    margin-bottom: none;
+    font-size: 0.7rem;
+}
+
+#schedule-wrapper{
+    background-color: #141414;
+    margin: none;
+    padding: 50px 0 50px 0;
+    height: auto;
+    text-align: center;
+    color: white;
+    
+
+}
+
+#schedule-wrapper table tr th{
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+#schedule-wrapper table tr td ul li{
+    color: white;
+    list-style: none;
+}
+
+#schedule-wrapper table tr td ul li.type{
+    color: #f39c12;
+    font-size: large;
+}
+
+#schedule-wrapper table tr td ul li.rest{
+    color: grey;
+    font-size: large;
+}
+
+#schedule-wrapper table tr td ul{
+    text-align: center;
+}
+
+.selector-label {
+    padding-right: 18px;
+    color: #f39c12;
+}
+.topLabel{
+    color: #d35400;
+}
+
+.cover{
+    background-color: #141414;
+    height: 100vh;
+}
+#modal-schedule{
+    text-align: center
+}
+
+
+.cover2{
+    background-image: url(/public/images/back2.jpg);
+    background-size: 100%;
+    height: 100%;
+}
+
+.about-page p{
+    text-align: justify;
+}
+
+.cover3{
+    background-color: #141414;
+    height: 100vh;
+}

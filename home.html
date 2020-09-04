@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html id="index"  lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Back Pack Tracks</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        
+    </head>
+    <body>
+        <div class="nv-cover">
+            <!--NAVBAR (different for homepage)-->
+            <div class="nv-nav">
+                <img src="images/logo.gif" alt="Logo" class="logo">
+                <ul class="main-nav">
+                  <li class="logged-out"><a href="home.html">Home</a></li>
+                  <li class="logged-in"><a href="chat.html">Chat</a></li>
+                  <li class="logged-in"><a href="assignments.html">Assignments</a></li>
+                  <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-login">Log In</a></li>
+                  <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-signup">Sign Up</a></li> 
+                  <li class="logged-in"><a href = "#" class="modal-trigger" data-target="modal-logout" id="logout">Log Out</a></li>
+                </ul>
+            </div>
+            <!--TITLE AND TAGLINE-->
+            <div class="text">
+                <h1>Back Pack Tracks</h1>
+                <h3>Memories that will last a lifetime.<br> Fast, free, easy. </h3>
+                <a href="#" a href = "#" data-target="modal-signup" class="modal-trigger nv-btn nv-btn-full">Start Now!</a>
+                <a href="#about" class="nv-btn nv-btn-ghost">Learn more</a>
+            </div>
+        </div>
+                <footer>
+            <div class="footer-section">
+                <h5><b>About Us</b></h5>
+                <p>This website was created by Andy Zhang, Nivedha Srinivasan, Hazem Zaky, and Benjamin Knobloch for Suns Out Hacks Out 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h5><b>Contact Us</b></h5>
+                <ul>
+                  <li><a class="black-text" href="mailto:nisrinivasan@ctemc.org">Email Nivedha</a></li>
+                  <li><a class="black-text" href="mailto:hazaky@ctemc.org">Email Hazem</a></li>
+                  <li><a class="black-text" href="mailto:beknobloch@ctemc.org">Email </a></li>
+                  <li><a class="black-text" href="mailto:andyzhang@ctemc.org">Email </a></li>
+                </ul>
+            </div>
+        </footer>
+
+
+
+        <!--MODALS-->
+        <!--SIGN UP MODAL: pops up when sign in is clicked-->
+        <div id="modal-signup" class="modal">
+            <div class="modal-content">
+              <h4>Sign up</h4><br />
+              <form id="signup-form">
+                <div class="input-field">
+                  <input type="email" id="signup-email" required />
+                  <label for="signup-email">Email address</label>
+                </div>
+                <div class="input-field">
+                  <input type="password" id="signup-password" required />
+                  <label for="signup-password">Choose password</label>
+                </div>
+                <div class="input-field">
+                  <input type="text" id="signup-name" required />
+                  <label for="signup-name">Full name</label>
+                </div>
+                
+                <button class="btn lavender darken-2 z-depth-0">Sign up</button>
+              </form>
+            </div>
+          </div>
+        
+          <!-- LOGIN MODAL: pops up when login is clicked -->
+          <div id="modal-login" class="modal">
+            <div class="modal-content">
+              <h4>Login</h4><br />
+              <form id="login-form">
+                <div class="input-field">
+                  <input type="email" id="login-email" required />
+                  <label for="login-email">Email address</label>
+                </div>
+                <div class="input-field">
+                  <input type="password" id="login-password" required />
+                  <label for="login-password">Your password</label>
+                </div>
+                <button class="btn lavender darken-2 z-depth-0">Login</button>
+              </form>
+            </div>
+         </div>
+
+        <!--SCRIPTS-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+
+<script
+src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+crossorigin="anonymous"></script>
+<script src="https://js.radar.io/v3/radar.min.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAMc_okDdMpPv2Qm20TWV761SpT6vn0luI",
+    authDomain: "roadtrip-planner-c92cb.firebaseapp.com",
+    databaseURL: "https://roadtrip-planner-c92cb.firebaseio.com",
+    projectId: "roadtrip-planner-c92cb",
+    storageBucket: "roadtrip-planner-c92cb.appspot.com",
+    messagingSenderId: "353920010382",
+    appId: "1:353920010382:web:f7fb1e05251992f0f721df",
+    measurementId: "G-1DK18G16BH"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    Radar.initialize('prj_test_pk_35e16f210872ff7482ff092b7d66b68de856ccbd'); //will have to change to live key
+</script>
+
+       
+        <script src="js/queries.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/index.js"></script>
+        <script type="module" src="js/grabassets.js"></script>
+        <script src="js/radarRequest.js"></script>
+        <script src="js/onRoad.js"></script>
+        <script src="https://js.radar.io/v3/radar.min.js"></script>
+    </body>
+    
+</html>
