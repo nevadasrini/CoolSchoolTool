@@ -41,20 +41,12 @@ signupForm.addEventListener('submit', (e) => {
 
     const name = signupForm['signup-name'].value;
 
-    const address = signupForm['signup-address'].value;
-    const city = signupForm['signup-city'].value;
-    const state = signupForm['signup-state'].value;
-
 
 
     const docID = email;
     db.collection('users').doc(docID).set({
         email: email,
         name: name,
-        address: address,
-        city: city,
-        state: state,
-        trips: [],
     })
     
     // sign up the user
@@ -67,27 +59,7 @@ signupForm.addEventListener('submit', (e) => {
         
         db.collection('users').doc(docID).update({
             userid: uid || "none"
-        }).then(()=>{
-            Radar.setUserId(cred.user.uid);
-            return getUser(cred.user.uid)
-            /*Radar.setUserId(uid);
-            Radar.setMetadata({
-                //want to put name and info here too? or unecessary
-
-            });
-            Radar.geocode(`${address} ${city} ${state}`, function(err, result){
-                if (!err){
-                    
-                }
-            })*/
-            // if(document.location.href.includes("index.html"))  document.location.href = "myTrips.html";
-        }).then(doc=>{
-            currentUser = doc;
-            currentUserData = doc.data();
-            console.info(currentUserData);
-            console.log(currentUserData.email);
         })
-        .catch(error=>console.error(error));
     })
     
     auth.onAuthStateChanged(user => {
@@ -121,7 +93,6 @@ loginForm.addEventListener('submit', (e) => {
         const modal = document.querySelector('#modal-login');
         M.Modal.getInstance(modal).close();
         loginForm.reset();
-        Radar.setUserId(cred.user.uid);
 
         return getUser(cred.user.uid);
     }).then(doc=>{
