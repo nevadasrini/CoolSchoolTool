@@ -1,0 +1,56 @@
+body{
+    background-image: linear-gradient(rgba(61, 57, 57, 0.65), rgba(61, 57, 57, 0.65)), url(/public/images/blackboard.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    background-attachment: fixed;
+}
+.nv-cover1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/public/images/science.webp);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    background-attachment: fixed;
+}
+
+.className {
+    padding-top: 60px;
+    text-align: center;
+    align-content: center;
+    font-size: 100px;
+    color: blue;
+}
+
+.assignmentList {
+    padding-top: 8vh;
+    padding-left: 10vw;
+}
+
+.notepadImage {
+    height: 15vh;
+    padding-left: 20px;
+    padding-top: 20px;
+    vertical-align: middle;
+    justify-items: left;
+}
+
+.assignment {
+    width: 80vw;
+    height: 20vh;
+    border: solid 4px green;
+    border-radius: 20px;;
+    background-color: rgb(97, 97, 223);
+}
+
+.assignmentTitle {
+    text-align: center;
+    font-size: 50px;
+    margin-top: -15vh;
+
+}
+
+.assignmentContent {
+    text-align: center;
+
+}

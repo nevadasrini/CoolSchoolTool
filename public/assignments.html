@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Assignments | CoolSchoolTool</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/assignments.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <div class="nv-cover1" style="height: 40vh;">
+        <!--NAVBAR (different for homepage)-->
+        <div class="nv-nav">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <ul class="main-nav">
+              <li class="logged-out"><a href="home.html">Home</a></li>
+              <li class="logged-in"><a href="chat.html">Chat</a></li>
+              <li class="logged-in"><a href="assignments.html">Assignments</a></li>
+              <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-login">Log In</a></li>
+              <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-signup">Sign Up</a></li> 
+              <li class="logged-in"><a href = "#" class="modal-trigger" data-target="modal-logout" id="logout">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="className">
+            Biology
+        </div>
+    </div>
+</nav>
+
+<div class="assignmentList">
+    <div class="assignment">
+        
+        <img src="images/notepad.png" alt="notepad" class="notepadImage">
+        <div class="assignmentTitle">
+        Bio Objectives
+        </div>
+        <div class="assignmentContent">
+            Complete this assignment before 11:59 pm on Sunday for full credit!
+        </div>
+    </div>
+    <br/><br/><br/><br/>
+    <div class="assignment">
+        
+        <img src="images/notepad.png" alt="notepad" class="notepadImage">
+        <div class="assignmentTitle">
+        Bio Objectives
+        </div>
+        <div class="assignmentContent">
+            Complete this assignment before 11:59 pm on Sunday for full credit!
+        </div>
+    </div>
+    <br/><br/><br/><br/>
+    <div class="assignment">
+        
+        <img src="images/notepad.png" alt="notepad" class="notepadImage">
+        <div class="assignmentTitle">
+        Bio Objectives
+        </div>
+        <div class="assignmentContent">
+            Complete this assignment before 11:59 pm on Sunday for full credit!
+        </div>
+    </div>
+</div>
+ 
+
+<footer  style="margin-top: 50vh;">
+    <div class="footer-section">
+        <h5><b>About Us</b></h5>
+        <p>This website was created by Hazem, Nivedha, Athulya, and Calum for Suns Out Hacks Out 2020.</p>
+    </div>
+    <div class="footer-section">
+        <h5><b>Contact Us</b></h5>
+        <ul>
+          <li><a class="black-text" href="mailto:nisrinivasan@ctemc.org">Email Nivedha</a></li>
+          <li><a class="black-text" href="mailto:hazaky@ctemc.org">Email Hazem</a></li>
+          <li><a class="black-text" href="mailto:">Email </a></li>
+          <li><a class="black-text" href="mailto:">Email </a></li>
+        </ul>
+    </div>
+</footer>
+        <!---
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+-->
+<!--SIGN UP MODAL: pops up when sign in is clicked-->
+<div id="modal-signup" class="modal">
+  <div class="modal-content">
+    <h4>Sign up</h4><br />
+    <form id="signup-form">
+      <div class="input-field">
+        <input type="text" id="signup-name" name="name" required />
+        <label for="signup-name">Full Name</label>
+      </div>
+      <div class="input-field">
+        <input type="email" id="signup-email" name="email" required />
+        <label for="signup-email">Email address</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="signup-password" required />
+        <label for="signup-password">Choose password</label>
+      </div>
+      <div class="input-field">
+        <input type="number" id="signup-age" name="age" required />
+        <label for="signup-age">Age</label>
+      </div>
+      <div class="input-field">
+        <input type="text" id="signup-field" name="field" required />
+        <label for="signup-field">Field</label>
+      </div>
+      <div class="input-field">
+        <input type="text" id="signup-skills" name="skills" required />
+        <label for="signup-skills">Skills</label>
+      </div>
+      <div class="input-field">
+        <input type="text" id="signup-bio" name="bio" required />
+        <label for="signup-skills">Short Bio</label>
+      </div>
+      <button class="btn lavender darken-2 z-depth-0">Sign up</button>
+    </form>
+  </div>
+</div>
+
+<!-- LOGIN MODAL: pops up when login is clicked -->
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+    <h4>Login</h4><br />
+    <form id="login-form">
+      <div class="input-field">
+        <input type="email" id="login-email" required />
+        <label for="login-email">Email address</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="login-password" required />
+        <label for="login-password">Your password</label>
+      </div>
+      <button class="btn lavender darken-2 z-depth-0">Login</button>
+    </form>
+  </div>
+</div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+
+  <script>
+    // web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBm-4tu-ZW5kdpLkUw6OLxFjB_ajLJFEnY",
+      authDomain: "preeminent-paninis.firebaseapp.com",
+      databaseURL: "https://preeminent-paninis.firebaseio.com",
+      projectId: "preeminent-paninis",
+      storageBucket: "preeminent-paninis.appspot.com",
+      messagingSenderId: "1025410002463",
+      appId: "1:1025410002463:web:40cec81a8b2a7c8f7caf2a",
+      measurementId: "G-Y35S3D1RJ4"
+
+      
+    };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     const auth = firebase.auth();
+    const db = firebase.firestore();
+    
+  </script>
+  <script src="js/auth.js" ></script>
+  <script src="js/index.js" defer></script>
+  <script src="js/queries.js" defer></script>
+  <script src="js/chat.js"></script>
+  </body>
+</html>
