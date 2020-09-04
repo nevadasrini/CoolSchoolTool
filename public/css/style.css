@@ -67,7 +67,7 @@ h3{
 
 .text {
     position: relative;
-    top: 17%;
+    top: 10%;
     height: 400px;
     margin-top: 20px;
     margin-left: 40px;
@@ -129,8 +129,10 @@ h3{
 }
 
 .logo {
-    height: 100px;
-    width: auto;
+    position: relative;
+    width: 5%;
+    margin-top: 2%;
+    left: 2%;
 }
 
 .main-nav {
