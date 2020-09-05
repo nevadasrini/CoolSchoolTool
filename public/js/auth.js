@@ -5,27 +5,11 @@ var currentUserData = null;
 
 auth.onAuthStateChanged(user => {
     if (user) {
-        console.log('user logged in: ', user)
-        if (!currentUser == null){
-            getUser(cred.user.uid).then(doc=>{
-                currentUser = doc;
-                currentUserData = doc.data();
-                setupUI(user);
-                console.info(currentUserData);
-            })
-            .catch(error=>console.error(error));
-        }else{
-            setupUI(user);
-        }
-        
+        console.log('user logged in: ', user);
+        setupUI(user);
     } else {
-        
-        if(!document.location.href.includes("index.html")){
-            document.location.href = "index.html";
-            console.log( document.location.href);
-        }
         setupUI();
-        console.log('user logged out');
+        console.log('user logged out')
     }
 })
 
@@ -93,12 +77,5 @@ loginForm.addEventListener('submit', (e) => {
         const modal = document.querySelector('#modal-login');
         M.Modal.getInstance(modal).close();
         loginForm.reset();
-
-        return getUser(cred.user.uid);
-    }).then(doc=>{
-        currentUser = doc;
-        currentUserData = doc.data();
-        console.info(currentUserData);
     })
-    .catch(error=>console.error(error));
 })

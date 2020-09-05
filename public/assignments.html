@@ -23,7 +23,7 @@
               <li class="logged-in"><a href="assignments.html">Assignments</a></li>
               <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-login">Log In</a></li>
               <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-signup">Sign Up</a></li> 
-              <li class="logged-in"><a href = "#" class="modal-trigger" data-target="modal-logout" id="logout">Log Out</a></li>
+              <li class="logged-in"><a href = "#" id="logout">Log Out</a></li>
             </ul>
         </div>
         <h1 style="text-align: center; color: #2ecc71;">Assignments</h1>
@@ -52,11 +52,7 @@
         </div>
      </div>
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
 
@@ -79,7 +75,9 @@
   const db = firebase.firestore();
     
   </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/auth.js" ></script>
+  <script src="js/index.js"></script>
   <script src="js/app.js" ></script>
   </body>
 </html>

@@ -14,20 +14,10 @@ addForm.addEventListener('submit', (e) => {
             console.log("loser~")
             db.collection('assignments').doc(docID).set({
                 subject: addForm['subject'].value,
-                duedate = addForm['due-date'].value,
-                desc = addForm['desc'].value,
-                userID = user.uid
+                duedate: addForm['due-date'].value,
+                desc: addForm['desc'].value,
+                userID: user.uid
             })
         }
-    })
-})
-
-// log out
-const logout = document.querySelector('#logout');
-logout.addEventListener('click', (e) => {
-    // prevent default actions (refresh)
-    e.preventDefault()
-    auth.signOut().then(() => {
-        console.log("logged out");
     })
 })
