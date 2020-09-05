@@ -13,7 +13,7 @@
   <link href="css/assignments.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-    <div class="nv-cover" style="height: 60vh;">
+    <div  style="height: 60vh;">
         <!--NAVBAR (different for homepage)-->
         <div class="nv-nav">
             <img src="images/logo.png" alt="Logo" class="logo">
@@ -28,6 +28,11 @@
         </div>
         <h1 style="text-align: center; color: #2ecc71;">Assignments</h1>
         <a href="#" data-target="modal-add" class="modal-trigger nv-btn nv-btn-full" style="position:relative; left: 43%;">Add Task</a>
+    </div><br>
+      <div class="task-display">
+        <!--LIST CONTAINING SONGS: populated by app.js-->
+        <ul id="task-list">
+        </ul>
       </div>
 
       <!-- ADD TASK MODAL: pops up when add task is clicked -->

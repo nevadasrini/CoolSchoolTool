@@ -1,12 +1,12 @@
 body{
-    background-image: linear-gradient(rgba(61, 57, 57, 0.65), rgba(61, 57, 57, 0.65)), url(/public/images/blackboard.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.479)), url(/public/images/blackboard.jpg);
+    margin: 0px;
     background-size: cover;
     background-position: center;
     margin: 0px;
     background-attachment: fixed;
 }
 .nv-cover1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/public/images/science.webp);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -53,4 +53,121 @@ body{
 .assignmentContent {
     text-align: center;
 
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 120px;
+}
+
+li:nth-child(even){
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+li span{
+    display: block;
+}
+
+
+li span:nth-child(2){
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+li span:nth-child(4){
+    position: relative;
+    font-size: 0.7rem;
+    float: right;
+}
+
+li button{
+    font-size: 16px;
+    margin-top: 6px;
+    color: #9185ec;
+}
+
+li button:hover{
+    color:white;
+}
+
+li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+    padding-top: 5px;
+    height:20%;
+}
+
+
+li:hover,
+li:active{
+    background: #2ecc71;
+
+    color: white;
+}
+
+.main-nav li:hover,
+.main-nav li:active{
+    background: none;
+    padding: 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #8cd6ab;
+}
+
+.main-nav li:nth-child(even){
+    padding: 0;
+    background:0;
+    border: none;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 30px;
+    transition: border-bottom 0.3s;
+    padding:0;
+    background: none;
+    border: none;
+}
+.main-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+span:hover,
+span:active{
+    color:white;
+}
+
+#desc:hover,
+#desc:active,
+#desc:focus{
+    border-bottom: 2px solid #3e3299;
+    transition: 0.2s;
+}
+
+.task-display{
+    align-content: center;
+    width: 60%;
+    left: 20%;
+    position: relative;
 }
