@@ -1,6 +1,26 @@
 const addForm = document.getElementById('addtask-form');
+const searchForm = document.getElementById('search-form');
+
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('assignments').get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+            auth.onAuthStateChanged(user => {
+                if (doc.data().userID== user.uid){
+                    if (doc.data().subject== searchForm['search'].value){
+                        console.log(searchForm['search'].value)
+                        renderTasks(doc)
+                        console.log(doc.data());
+                    }
+
+                }
+            })
+        })
+    })
+
+})
+
 addForm.addEventListener('submit', (e) => {
-    console.log("pooser!")
     // prevent refresh (losing info)
     e.preventDefault();
 
@@ -11,7 +31,6 @@ addForm.addEventListener('submit', (e) => {
 
     auth.onAuthStateChanged(user => {
         if (user) {
-            console.log("loser~")
             db.collection('assignments').doc(docID).set({
                 subject: addForm['subject'].value,
                 duedate: addForm['due-date'].value,
@@ -58,13 +77,15 @@ function renderTasks(doc){
 }
 
 //cycle through assignments and pass through render function
-db.collection('assignments').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-        auth.onAuthStateChanged(user => {
-            if (doc.data().userID== user.uid){
-                renderTasks(doc)
-                console.log(doc.data());
-            }
+if(searchForm['search'].value==''){
+    db.collection('assignments').get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+            auth.onAuthStateChanged(user => {
+                if (doc.data().userID== user.uid){
+                    renderTasks(doc)
+                    console.log(doc.data());
+                }
+            })
         })
     })
-})
+}
