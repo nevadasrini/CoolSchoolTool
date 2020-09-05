@@ -26,13 +26,9 @@
               <li class="logged-in"><a href = "#" id="logout">Log Out</a></li>
             </ul>
         </div>
-        <h1 style="text-align: center; color: #2ecc71;">Assignments</h1>
-        <a href="#" data-target="modal-add" class="modal-trigger nv-btn nv-btn-full" style="position:relative; left: 43%;">Add Task</a>
+        <h1 style="text-align: center; color: #2ecc71;">Rooms</h1>
+        <a href="#" data-target="modal-add" class="modal-trigger nv-btn nv-btn-full" style="position:relative; left: 43%;">Add Room</a>
     </div><br>
-      <form style="width: 60%; left: 20%; position: relative;" id="search-form">
-        <label for="search">Search:</label>
-        <input type="text" id="search" name="search" style="color:white;"></form>
-      </form>
       <div class="task-display">
         <!--LIST CONTAINING SONGS: populated by app.js-->
         <ul id="task-list">
@@ -42,19 +38,15 @@
       <!-- ADD TASK MODAL: pops up when add task is clicked -->
       <div id="modal-add" class="modal">
         <div class="modal-content">
-          <h4>Add Task</h4><br />
+          <h4>Add Room</h4><br />
           <form id="addtask-form">
             <div class="input-field">
               <input type="text" id="subject" required />
               <label for="subject">Subject</label>
             </div>
             <div class="input-field">
-              <input type="date" id="due-date" required />
-              <label for="due-date">Due Date</label>
-            </div>
-            <div class="input-field">
               <input type="text" id="desc" required />
-              <label for="desc">Description</label>
+              <label for="desc">code</label>
             </div>
             <button class="btn lavender darken-2 z-depth-0" type="submit">ADD TASK</button>
           </form>
@@ -87,6 +79,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/auth.js" ></script>
   <script src="js/index.js"></script>
-  <script src="js/app.js" ></script>
+  <script src="js/chat.js" ></script>
   </body>
 </html>
