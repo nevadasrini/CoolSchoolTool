@@ -3,16 +3,13 @@ const searchForm = document.getElementById('search-form');
 
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('assignments').get().then((snapshot) => {
+    db.collection('assignments').where('subject', '==', searchForm['search'].value).get().then((snapshot) => {
         snapshot.docs.forEach(doc => {
             auth.onAuthStateChanged(user => {
                 if (doc.data().userID== user.uid){
-                    if (doc.data().subject== searchForm['search'].value){
                         console.log(searchForm['search'].value)
                         renderTasks(doc)
                         console.log(doc.data());
-                    }
-
                 }
             })
         })
