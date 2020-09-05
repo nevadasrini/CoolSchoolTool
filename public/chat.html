@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Assignments | clasScape</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/assignments.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <div  style="height: 60vh;">
+        <!--NAVBAR (different for homepage)-->
+        <div class="nv-nav">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <ul class="main-nav">
+              <li class="logged-out"><a href="index.html">Home</a></li>
+              <li class="logged-in"><a href="chat.html">Chat</a></li>
+              <li class="logged-in"><a href="assignments.html">Assignments</a></li>
+              <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-login">Log In</a></li>
+              <li class="logged-out"><a href = "#" class="modal-trigger" data-target="modal-signup">Sign Up</a></li> 
+              <li class="logged-in"><a href = "#" id="logout">Log Out</a></li>
+            </ul>
+        </div>
+        <h1 style="text-align: center; color: #2ecc71;">Rooms</h1>
+        <a href="#" data-target="modal-add" class="modal-trigger nv-btn nv-btn-full" style="position:relative; left: 43%;">Add Room</a>
+    </div><br>
+      <div class="task-display">
+        <!--LIST CONTAINING SONGS: populated by app.js-->
+        <ul id="task-list">
+        </ul>
+      </div>
+      <br>
+      <!-- ADD TASK MODAL: pops up when add task is clicked -->
+      <div id="modal-add" class="modal">
+        <div class="modal-content">
+          <h4>Add Room</h4><br />
+          <form id="addtask-form">
+            <div class="input-field">
+              <input type="text" id="subject" required />
+              <label for="subject">Subject</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="desc" required />
+              <label for="desc">code</label>
+            </div>
+            <button class="btn lavender darken-2 z-depth-0" type="submit">ADD TASK</button>
+          </form>
+        </div>
+     </div>
+  <!--  Scripts-->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+
+  <script>
+    // web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyDzmOrKYE_XcdA4cvhu2CzjtmUhTw_FSH4",
+    authDomain: "coolschooltool-b83b4.firebaseapp.com",
+    databaseURL: "https://coolschooltool-b83b4.firebaseio.com",
+    projectId: "coolschooltool-b83b4",
+    storageBucket: "coolschooltool-b83b4.appspot.com",
+    messagingSenderId: "1019691363895",
+    appId: "1:1019691363895:web:bd161cc9399216e385d9b2",
+    measurementId: "G-SXS686NZ6R"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+    
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/auth.js" ></script>
+  <script src="js/index.js"></script>
+  <script src="js/chat.js" ></script>
+  </body>
+</html>
