@@ -10,6 +10,8 @@ searchForm.addEventListener('submit', (e) => {
                         console.log(searchForm['search'].value)
                         renderTasks(doc)
                         console.log(doc.data());
+                        location.reload();
+                        return false;
                 }
             })
         })
@@ -33,6 +35,10 @@ addForm.addEventListener('submit', (e) => {
                 duedate: addForm['due-date'].value,
                 desc: addForm['desc'].value,
                 userID: user.uid
+            }).then(cred=> {
+                const modal = document.querySelector('#modal-add');
+                M.Modal.getInstance(modal).close();
+                loginForm.reset();
             })
         }
     })

@@ -16,6 +16,10 @@ addForm.addEventListener('submit', (e) => {
                 subject: addForm['subject'].value,
                 room: addForm['desc'].value,
                 userID: user.uid
+            }).then(cred=> {
+                const modal = document.querySelector('#modal-add');
+                M.Modal.getInstance(modal).close();
+                loginForm.reset();
             })
         }
     })
