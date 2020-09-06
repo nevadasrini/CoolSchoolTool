@@ -73,13 +73,54 @@ function renderTasks(doc){
     })
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  //setInterval(page_refresh, 0.25*60000)
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.');
+    return;
+  }
+  if (Notification.permission !== 'granted') {
+    Notification.requestPermission();
+  }
+});
+
+
+function checkNotif(doc) {
+  //console.log(doc);
+  const duedate = Date.parse(doc.duedate);
+  //console.log(duedate);
+  var OneDay = new Date().getTime() + (1 * 24 * 60 * 60 * 1000)
+  var OneHour = new Date().getTime() + (1 * 60 * 60 * 1000)
+  if (OneDay > duedate) {
+    //console.log('Less than 1 day')
+    sendNotif(doc, 'a day');
+  } else if (OneDay < duedate) {
+    //console.log('More than 1 day')
+  }
+}
+
+function sendNotif(doc, timeRemains) {
+  if (Notification.permission !== 'granted')
+    Notification.requestPermission();
+  else {
+    var notification = new Notification(`${doc.subject} is due in less than ${timeRemains}!`, {
+      icon: 'https://classcape.online/images/logo.png',
+      body: `${doc.desc} - ${doc.duedate}`,
+    });
+    notification.onclick = function() {
+      window.open('https://classcape.online/assignments.html');
+    };
+  }
+}
+
 //cycle through assignments and pass through render function
 if(searchForm['search'].value==''){
     db.collection('assignments').get().then((snapshot) => {
         snapshot.docs.forEach(doc => {
             auth.onAuthStateChanged(user => {
                 if (doc.data().userID== user.uid){
-                    renderTasks(doc)
+                    renderTasks(doc);
+                    checkNotif(doc.data());
                     console.log(doc.data());
                 }
             })
