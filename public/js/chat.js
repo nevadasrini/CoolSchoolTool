@@ -7,6 +7,7 @@ addForm.addEventListener('submit', (e) => {
     // get user info
     const subject = addForm['subject'].value;
     const description = addForm['desc'].value;
+    const linkID = 'public/conferencing-master/live-demo/web/login.html?subject=' + subject + '&code=' + description;
     const docID = subject+description;
 
     auth.onAuthStateChanged(user => {
@@ -15,6 +16,7 @@ addForm.addEventListener('submit', (e) => {
             db.collection('rooms').doc(docID).set({
                 subject: addForm['subject'].value,
                 room: addForm['desc'].value,
+                link: linkID,
                 userID: user.uid
             }).then(cred=> {
                 const modal = document.querySelector('#modal-add');
@@ -40,11 +42,27 @@ function renderTasks(doc){
     name.textContent = doc.data().subject;
     desc.textContent = doc.data().room;
     cross.textContent = 'X';
+    // Create anchor element. 
+                var a = document.createElement('a');  
+                  
+                // Create the text node for anchor element. 
+                var link = document.createTextNode("Join Class!"); 
+                  
+                // Append the text node to anchor element. 
+                a.appendChild(link);  
+                  
+                  
+                // Set the href property. 
+                a.href = doc.data().link;  
+                  
+                // Append the anchor element to the body. 
+                
 
     //append elements of taskList to each list item
     li.appendChild(name);
     li.appendChild(desc);
     li.appendChild(cross);
+    li.appendChild(a);  
 
     //append list item to taskList
     taskList.appendChild(li);
