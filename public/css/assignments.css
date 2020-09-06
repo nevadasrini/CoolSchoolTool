@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.479)), url(/public/images/blackboard.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.479)), url(../images/blackboard.jpg);
     margin: 0px;
     background-size: cover;
     background-position: center;
