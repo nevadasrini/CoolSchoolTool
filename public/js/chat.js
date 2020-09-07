@@ -7,7 +7,7 @@ addForm.addEventListener('submit', (e) => {
     // get user info
     const subject = addForm['subject'].value;
     const description = addForm['desc'].value;
-    const linkID = '/conferencing-master/live-demo/web/login.html';
+    const linkID = '/app.html';
     const docID = subject+description;
 
     auth.onAuthStateChanged(user => {
